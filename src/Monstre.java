@@ -1,14 +1,14 @@
 
-public class Monstre {
-	private String nom;
+public class Monster {
+	private String name;
 	private int hp;
 	private int ataque;
-	private int defensa;
+	private int defense;
 	public String getNom() {
-		return nom;
+		return name;
 	}
 	public void setNom(String nom) {
-		this.nom = nom;
+		this.name = name;
 	}
 	public int getHp() {
 		return hp;
@@ -23,22 +23,22 @@ public class Monstre {
 		this.ataque = ataque;
 	}
 	public int getDefensa() {
-		return defensa;
+		return defense;
 	}
 	public void setDefensa(int defensa) {
-		this.defensa = defensa;
+		this.defense = defensa;
 	}
-	
-	public Monstre (String nom, int hp, int ataque, int defensa) {
-		this.nom = nom;
+
+	public Monster (String nom, int hp, int ataque, int defensa) {
+		this.name = nom;
 		this.hp = hp;
 		this.ataque = ataque;
-		this.defensa = defensa;
+		this.defense = defensa;
 	}
-	public Monstre () {
-		this.nom = null;
+	public Monster () {
+		this.name = null;
 		this.hp = 0;
 		this.ataque = 0;
-		this.defensa = 0;
+		this.defense = 0;
 	}
 }

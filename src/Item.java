@@ -1,3 +1,7 @@
 public class Item {
-    // TEST!
+    // Atributos
+
+    // Constructores
+
+    // Métodos
 }

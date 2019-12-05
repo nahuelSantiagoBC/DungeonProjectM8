@@ -2,20 +2,20 @@ public class Stats extends Item {
     // Atributos
     private int hp;
     private int damage;
-    private int defense;
+    private int armor;
 
     // Constructores
-    public Stats(String name, String type, int hp, int damage, int defense) {
+    public Stats(String name, String type, int hp, int damage, int armor) {
         super(name, type);
         this.hp = hp;
         this.damage = damage;
-        this.defense = defense;
+        this.armor = armor;
     }
 
-    public Stats(int hp, int damage, int defense) {
+    public Stats(int hp, int damage, int armor) {
         this.hp = hp;
         this.damage = damage;
-        this.defense = defense;
+        this.armor = armor;
     }
 
     // Métodos
@@ -35,11 +35,11 @@ public class Stats extends Item {
         this.damage = damage;
     }
 
-    public int getDefense() {
-        return defense;
+    public int getArmor() {
+        return armor;
     }
 
-    public void setDefense(int defense) {
-        this.defense = defense;
+    public void setArmor(int armor) {
+        this.armor = armor;
     }
 }

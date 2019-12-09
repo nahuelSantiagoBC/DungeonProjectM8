@@ -1,14 +1,15 @@
 public class Character {
 
 	//atributos
-	private int id;
-	private String name;
-	private int maxHp;
-	private int hp;
-	private int attack;
-	private int defense;
-	private boolean defending;
-	private int extraDefense;
+	protected static int timesCreated = 0;
+	protected int id;
+	protected String name;
+	protected int maxHp;
+	protected int hp;
+	protected int attack;
+	protected int defense;
+	protected boolean defending;
+	protected int extraDefense;
 	
 	//métodos
 	

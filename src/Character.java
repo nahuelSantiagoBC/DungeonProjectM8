@@ -1,18 +1,31 @@
 public class Character {
 
 	//atributos
-	protected static int timesCreated = 0;
-	protected int id;
 	protected String name;
 	protected int maxHp;
 	protected int hp;
 	protected int attack;
 	protected int defense;
 	protected int extraDefense;
-	protected boolean defending;
+	protected boolean defending = false;
 	private Item inventory;
 	//boleana para controlar si el personaje utiliza los objetos o no
 	private boolean useItems;
+	
+	public Character (String name, int hp, int attack, int defense) {
+		this.name = name;
+		this.maxHp = hp;
+		this.hp = hp;
+		this.attack = attack;
+		this.defense = defense;
+	}
+	public Character () {
+		this.name = null;
+		this.maxHp = 0;
+		this.hp = 0;
+		this.attack = 0;
+		this.defense = 0;
+	}
 	
 	//métodos
 	
@@ -26,6 +39,9 @@ public class Character {
 		
 		if (damage > 0) {
 			target.setHp(target.getHp() - damage);
+			if (target.getHp() <= 0) {
+				target.die();
+			}
 		}
 	}
 	/**
@@ -39,22 +55,6 @@ public class Character {
 	
 	//getters & setters
 	
-	/**
-	 * Get the Character's ID
-	 * @return Character's ID
-	 */
-	
-	private int getId() {
-		return this.id;
-	}
-	/**
-	 * Modify the Character's ID
-	 * @param id
-	 */
-	
-	private void setId(int id) {
-		this.id = id;
-	}
 	/**
 	 * Get the Character's Name
 	 * @return Character's Name

@@ -39,9 +39,7 @@ public class Character {
 		
 		if (damage > 0) {
 			target.setHp(target.getHp() - damage);
-			if (target.getHp() <= 0) {
-				target.die();
-			}
+			
 		}
 	}
 	/**
@@ -104,6 +102,9 @@ public class Character {
 	 */
 	private void setHp(int hp) {
 		this.hp = hp;
+		if (this.hp <= 0) {
+			this.die();
+		}
 	}
 	
 	/**

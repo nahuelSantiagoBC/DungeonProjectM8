@@ -42,6 +42,7 @@ public class Character {
 			
 		}
 	}
+	
 	/**
 	 * Defensarse. Aquesta acció fixa el teu estat a defensa.<br>
 	 * Al ser atacat rebrà menys Damage.
@@ -50,11 +51,18 @@ public class Character {
 		this.defending = true;
 	}
 	
+	/**
+	 * El personaje muere
+	 */
+	public void die () {
+		
+	}
+	
 	
 	//getters & setters
 	
 	/**
-	 * Get the Character's Name
+	 * Obtener el nombre del personaje
 	 * @return Character's Name
 	 */
 	
@@ -63,7 +71,7 @@ public class Character {
 	}
 	
 	/**
-	 * Modify the Character's Name
+	 * Modificar el nombre del personaje
 	 * @param name
 	 */
 	
@@ -72,7 +80,7 @@ public class Character {
 	}
 	
 	/**
-	 * Get the Character's Max HP
+	 * Obtener la vida del personaje maxima
 	 * @return Character's Max HP
 	 */
 	private int getMaxHp() {
@@ -80,7 +88,7 @@ public class Character {
 	}
 	
 	/**
-	 * Modify the Character's Max HP
+	 * Modificar la vida del personaje maxima
 	 * @param maxHp
 	 */
 	
@@ -89,7 +97,7 @@ public class Character {
 	}
 	
 	/**
-	 * Get the Character's HP
+	 * Obtener la vida del personaje
 	 * @return Character's HP
 	 */
 	private int getHp() {
@@ -97,7 +105,7 @@ public class Character {
 	}
 	
 	/**
-	 * Modify the Character's HP
+	 * Modificar la vida del personaje y comprobar si es 0.
 	 * @param hp
 	 */
 	private void setHp(int hp) {
@@ -108,7 +116,7 @@ public class Character {
 	}
 	
 	/**
-	 * Get the Character's Attack
+	 * Obtener el ataque del personaje
 	 * @return Character's Attack
 	 */
 	private int getAttack() {
@@ -116,7 +124,7 @@ public class Character {
 	}
 	
 	/**
-	 * Modify the Character's Attack
+	 * Modificar el ataque del personaje
 	 * @param attack
 	 */
 	private void setAttack(int attack) {
@@ -124,7 +132,7 @@ public class Character {
 	}
 	
 	/**
-	 * Get the Character's Defense
+	 * Obtener la defensa del personaje
 	 * @return Character's Defense
 	 */
 	private int getDefense() {
@@ -132,7 +140,7 @@ public class Character {
 	}
 	
 	/**
-	 * Modify the Character's Defense
+	 * Modificar la defensa del personaje
 	 * @param defense
 	 */
 	private void setDefense(int defense) {
@@ -140,7 +148,7 @@ public class Character {
 	}
 	
 	/**
-	 * Get the Character's Extra Defense Value
+	 * Obtener el valor de defensa extra del personaje
 	 * @return Character's Extra Defense
 	 */
 	public int getExtraDefense() {
@@ -148,28 +156,52 @@ public class Character {
 	}
 	
 	/**
-	 * Modify the Character's Extra Defense Value
+	 * Modificar el valor de defensa extra del personaje
 	 * @param extraDefense
 	 */
 	public void setExtraDefense(int extraDefense) {
 		this.extraDefense = extraDefense;
 	}
 	
+	/**
+	 * Ver si el personaje se esta defendiendo
+	 * @return
+	 */
 	private boolean isDefending() {
 		return defending;
 	}
+	/**
+	 * Modificar si el personaje de esta defendiendo
+	 * @param defending
+	 */
 	private void setDefending(boolean defending) {
 		this.defending = defending;
 	}
+	/**
+	 * Obtener el inventario del personaje
+	 * @return
+	 */
 	public Item getInventory() {
 		return inventory;
 	}
+	/**
+	 * Asignar un inventario al personaje
+	 * @param inventory
+	 */
 	private void setInventory(Item inventory) {
 		this.inventory = inventory;
 	}
+	/**
+	 * Ver si el personaje puede usar objetos
+	 * @return
+	 */
 	private boolean isUseItems() {
 		return useItems;
 	}
+	/**
+	 * Modificar si el peronaje puede usar objetos
+	 * @param useItems
+	 */
 	private void setUseItems(boolean useItems) {
 		this.useItems = useItems;
 	}

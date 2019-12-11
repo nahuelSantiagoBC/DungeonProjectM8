@@ -8,4 +8,7 @@ public class Monster extends Character {
 		super();
 	}
 	
+	public void die () {
+		
+	}
 }

@@ -8,8 +8,11 @@ public class Character {
 	protected int hp;
 	protected int attack;
 	protected int defense;
-	protected boolean defending;
 	protected int extraDefense;
+	protected boolean defending;
+	private Item inventory;
+	//boleana para controlar si el personaje utiliza los objetos o no
+	private boolean useItems;
 	
 	//métodos
 	
@@ -149,6 +152,25 @@ public class Character {
 	 */
 	public void setExtraDefense(int extraDefense) {
 		this.extraDefense = extraDefense;
+	}
+	
+	private boolean isDefending() {
+		return defending;
+	}
+	private void setDefending(boolean defending) {
+		this.defending = defending;
+	}
+	public Item getInventory() {
+		return inventory;
+	}
+	private void setInventory(Item inventory) {
+		this.inventory = inventory;
+	}
+	private boolean isUseItems() {
+		return useItems;
+	}
+	private void setUseItems(boolean useItems) {
+		this.useItems = useItems;
 	}
 	
 }

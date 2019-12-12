@@ -9,6 +9,6 @@ public class Monster extends Character {
 	}
 	
 	public void die () {
-		
+		System.out.println("Has derrotado al monstruo!");
 	}
 }

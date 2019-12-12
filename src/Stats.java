@@ -6,7 +6,7 @@ public class Stats extends Item {
 
     // Constructores
     public Stats(String name, String type, int hp, int damage, int armor) {
-        super(name, type);
+        super(name, type); //???
         this.hp = hp;
         this.damage = damage;
         this.armor = armor;

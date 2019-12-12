@@ -1,4 +1,4 @@
-public class Character {
+public abstract class Character {
 
 	//atributos
 	protected String name;
@@ -54,9 +54,7 @@ public class Character {
 	/**
 	 * El personaje muere
 	 */
-	public void die () {
-		
-	}
+	public abstract void die();
 	
 	
 	//getters & setters

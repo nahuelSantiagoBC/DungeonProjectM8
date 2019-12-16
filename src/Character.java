@@ -18,6 +18,7 @@ public abstract class Character {
 		this.hp = hp;
 		this.attack = attack;
 		this.defense = defense;
+		this.inventory = null;
 	}
 	public Character () {
 		this.name = null;
@@ -25,6 +26,7 @@ public abstract class Character {
 		this.hp = 0;
 		this.attack = 0;
 		this.defense = 0;
+		this.inventory = null;
 	}
 	
 	//métodos
@@ -54,7 +56,7 @@ public abstract class Character {
 	/**
 	 * El personaje muere
 	 */
-	public abstract void die();
+	public abstract void die(Hero heroe);
 	
 	
 	//getters & setters
@@ -64,7 +66,7 @@ public abstract class Character {
 	 * @return Character's Name
 	 */
 	
-	private String getName() {
+	public String getName() {
 		return this.name;
 	}
 	
@@ -73,7 +75,7 @@ public abstract class Character {
 	 * @param name
 	 */
 	
-	private void setName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 	
@@ -81,7 +83,7 @@ public abstract class Character {
 	 * Obtener la vida del personaje maxima
 	 * @return Character's Max HP
 	 */
-	private int getMaxHp() {
+	public int getMaxHp() {
 		return this.maxHp;
 	}
 	
@@ -90,7 +92,7 @@ public abstract class Character {
 	 * @param maxHp
 	 */
 	
-	private void setMaxHp(int maxHp) {
+	public void setMaxHp(int maxHp) {
 		this.maxHp = maxHp;
 	}
 	
@@ -98,7 +100,7 @@ public abstract class Character {
 	 * Obtener la vida del personaje
 	 * @return Character's HP
 	 */
-	private int getHp() {
+	public int getHp() {
 		return this.hp;
 	}
 	
@@ -106,10 +108,10 @@ public abstract class Character {
 	 * Modificar la vida del personaje y comprobar si es 0.
 	 * @param hp
 	 */
-	private void setHp(int hp) {
+	public void setHp(int hp) {
 		this.hp = hp;
 		if (this.hp <= 0) {
-			this.die();
+			this.die(this);
 		}
 	}
 	
@@ -117,7 +119,7 @@ public abstract class Character {
 	 * Obtener el ataque del personaje
 	 * @return Character's Attack
 	 */
-	private int getAttack() {
+	public int getAttack() {
 		return this.attack;
 	}
 	
@@ -125,7 +127,7 @@ public abstract class Character {
 	 * Modificar el ataque del personaje
 	 * @param attack
 	 */
-	private void setAttack(int attack) {
+	public void setAttack(int attack) {
 		this.attack = attack;
 	}
 	
@@ -133,7 +135,7 @@ public abstract class Character {
 	 * Obtener la defensa del personaje
 	 * @return Character's Defense
 	 */
-	private int getDefense() {
+	public int getDefense() {
 		return this.defense;
 	}
 	
@@ -141,7 +143,7 @@ public abstract class Character {
 	 * Modificar la defensa del personaje
 	 * @param defense
 	 */
-	private void setDefense(int defense) {
+	public void setDefense(int defense) {
 		this.defense = defense;
 	}
 	
@@ -165,14 +167,14 @@ public abstract class Character {
 	 * Ver si el personaje se esta defendiendo
 	 * @return
 	 */
-	private boolean isDefending() {
+	public boolean isDefending() {
 		return defending;
 	}
 	/**
 	 * Modificar si el personaje de esta defendiendo
 	 * @param defending
 	 */
-	private void setDefending(boolean defending) {
+	public void setDefending(boolean defending) {
 		this.defending = defending;
 	}
 	/**
@@ -186,21 +188,21 @@ public abstract class Character {
 	 * Asignar un inventario al personaje
 	 * @param inventory
 	 */
-	private void setInventory(Item inventory) {
+	public void setInventory(Item inventory) {
 		this.inventory = inventory;
 	}
 	/**
 	 * Ver si el personaje puede usar objetos
 	 * @return
 	 */
-	private boolean isUseItems() {
+	public boolean isUseItems() {
 		return useItems;
 	}
 	/**
 	 * Modificar si el peronaje puede usar objetos
 	 * @param useItems
 	 */
-	private void setUseItems(boolean useItems) {
+	public void setUseItems(boolean useItems) {
 		this.useItems = useItems;
 	}
 	

@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Monster extends Character {
 	
@@ -8,7 +9,17 @@ public class Monster extends Character {
 		super();
 	}
 	
-	public void die () {
+	public void die (Hero heroe) {
 		System.out.println("Has derrotado al monstruo!");
+		
+		System.out.println("Quieres ver si el monstruo lleva algún objeto consigo? (si/no)");
+		Scanner teclado = new Scanner(System.in);
+		String respuesta = teclado.nextLine();
+		
+		if (respuesta.equalsIgnoreCase("si")) {
+			
+			heroe.searchItems(this);
+		}
+		
 	}
 }

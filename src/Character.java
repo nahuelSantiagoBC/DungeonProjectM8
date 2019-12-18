@@ -53,12 +53,6 @@ public abstract class Character {
 		this.defending = true;
 	}
 	
-	/**
-	 * El personaje muere
-	 */
-	public abstract void die(Hero heroe);
-	
-	
 	//getters & setters
 	
 	/**
@@ -114,7 +108,9 @@ public abstract class Character {
 			this.die(this);
 		}
 	}
-	
+
+	protected abstract void die(Character character);
+
 	/**
 	 * Obtener el ataque del personaje
 	 * @return Character's Attack

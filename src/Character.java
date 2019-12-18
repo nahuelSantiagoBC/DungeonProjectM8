@@ -191,7 +191,7 @@ public abstract class Character {
 	 * Ver si el personaje puede usar objetos
 	 * @return
 	 */
-	public boolean isUseItems() {
+	public boolean isItemUser() {
 		return useItems;
 	}
 	/**

@@ -9,6 +9,9 @@ public class Monster extends Character {
 		super();
 	}
 	
+	/**
+	 * El Monstruo muere y da la opción al heroe de buscar objetos
+	 */
 	public void die (Character heroe) {
 		System.out.println("Has derrotado al monstruo!");
 		
@@ -22,6 +25,9 @@ public class Monster extends Character {
 		}
 		
 	}
+	/**
+	 * El monstruo no puede buscar objetos, esto no hace nada, pero es necesario implementarlo
+	 */
 	public void searchItems(Monster monster) {
 		
 		

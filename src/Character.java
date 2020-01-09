@@ -20,6 +20,9 @@ public abstract class Character {
 		this.defense = defense;
 		this.inventory = null;
 	}
+	/**
+	 * @TODO: Parametres aleatoris
+	 */
 	public Character () {
 		this.name = null;
 		this.maxHp = 0;

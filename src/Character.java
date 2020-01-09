@@ -1,5 +1,12 @@
+import java.lang.reflect.Array;
+import java.util.Random;
+
 public abstract class Character {
 
+	protected static final int MAX_HP_LIMIT = 500;
+	protected static final int ATTACK_LIMIT = 50;
+	protected static final int DEFENSE_LIMIT = 10;
+	
 	//atributos
 	protected String name;
 	protected int maxHp;
@@ -24,6 +31,7 @@ public abstract class Character {
 	 * @TODO: Parametres aleatoris
 	 */
 	public Character () {
+		Random randomGenerator = new Random();
 		this.name = null;
 		this.maxHp = 0;
 		this.hp = 0;

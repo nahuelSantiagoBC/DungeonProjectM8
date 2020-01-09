@@ -1,15 +1,14 @@
 
-public class Soldat extends Hero {
+public class Mage extends Hero {
 
-	public Soldat() {
+	public Mage() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Soldat(String name, int hp, int attack, int defense) {
+	public Mage(String name, int hp, int attack, int defense) {
 		super(name, hp, attack, defense);
 		// TODO Auto-generated constructor stub
 	}
-
 	
 }

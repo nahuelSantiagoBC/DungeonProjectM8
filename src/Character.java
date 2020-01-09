@@ -1,11 +1,27 @@
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Random;
 
 public abstract class Character {
 
 	protected static final int MAX_HP_LIMIT = 500;
+	protected static final int MAX_HP_MINIMUM = 300;
 	protected static final int ATTACK_LIMIT = 50;
+	protected static final int ATTACK_MINIMUM = 20;
 	protected static final int DEFENSE_LIMIT = 10;
+	protected static final int DEFENSE_MINIMUM = 0;
+	protected static final String RANDOM_NAMES[] = {
+			"Jonnhy",
+			"Chuck Norris",
+			"Lizardo",
+			"Fénix",
+			"Darth Vader",
+			"Salmón",
+			"El tío Pepe",
+			"Aragorn",
+			"Shrek",
+			"Uganda Knuckles"
+	};
 	
 	//atributos
 	protected String name;
@@ -32,11 +48,11 @@ public abstract class Character {
 	 */
 	public Character () {
 		Random randomGenerator = new Random();
-		this.name = null;
-		this.maxHp = 0;
-		this.hp = 0;
-		this.attack = 0;
-		this.defense = 0;
+		this.name = RANDOM_NAMES[randomGenerator.nextInt((RANDOM_NAMES.length) + 1)];
+		this.maxHp = randomGenerator.nextInt((MAX_HP_LIMIT - MAX_HP_MINIMUM) + 1) + MAX_HP_MINIMUM;
+		this.hp = maxHp;
+		this.attack = randomGenerator.nextInt((ATTACK_LIMIT - ATTACK_MINIMUM) + 1) + ATTACK_MINIMUM;
+		this.defense = randomGenerator.nextInt((DEFENSE_LIMIT - DEFENSE_MINIMUM) + 1) + DEFENSE_MINIMUM;
 		this.inventory = null;
 	}
 	

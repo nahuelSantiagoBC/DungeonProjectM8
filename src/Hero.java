@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class Hero extends Character {
 
 	//métodos
-	public void searchItems(Character target) {
+	public void searchItems(Monster target) {
 		Scanner teclado = new Scanner(System.in);
 		String respuesta;
 		
@@ -35,8 +35,8 @@ public class Hero extends Character {
 		System.out.println("Objeto equipado.");
 	}
 
-	public void die(Hero heroe) {
-		
+	public void die(Character character) {
+		System.out.println("Final del Joc");
 	}
 	
 }

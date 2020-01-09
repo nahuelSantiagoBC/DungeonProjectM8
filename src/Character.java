@@ -201,6 +201,8 @@ public abstract class Character {
 	public void setUseItems(boolean useItems) {
 		this.useItems = useItems;
 	}
+	// Esto no hará nada en monstruos
+	protected abstract void searchItems(Monster monster);
 	
 }
 

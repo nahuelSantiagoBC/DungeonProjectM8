@@ -28,13 +28,13 @@ public class Monster extends Character {
 		System.out.println("Has derrotado al monstruo!");
 		
 		System.out.println("Quieres ver si el monstruo lleva algún objeto consigo? (si/no)");
-		Scanner teclado = new Scanner(System.in);
-		String respuesta = teclado.nextLine();
+		Scanner input = new Scanner(System.in);
+		String answer = input.nextLine();
 		
-		if (respuesta.equalsIgnoreCase("si")) {
+		if (answer.equalsIgnoreCase("si")) {
 			
 			hero.searchItems(this);
 		}
-		
+		input.close();
 	}
 }

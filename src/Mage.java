@@ -95,7 +95,7 @@ public class Mage extends Hero {
 	 * Utilitza la bola de foc
 	 * @param target
 	 */
-	public void useSpell(Monster target) {
+	public void useSpell(Character target) {
 		target.setHp(target.getHp() - 100);
 	}
 

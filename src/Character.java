@@ -6,10 +6,10 @@ public abstract class Character {
 
 	protected static final int MAX_HP_LIMIT = 500;
 	protected static final int MAX_HP_MINIMUM = 300;
-	protected static final int ATTACK_LIMIT = 50;
-	protected static final int ATTACK_MINIMUM = 20;
-	protected static final int DEFENSE_LIMIT = 10;
-	protected static final int DEFENSE_MINIMUM = 0;
+	protected static final int ATTACK_LIMIT = 150;
+	protected static final int ATTACK_MINIMUM = 50;
+	protected static final int DEFENSE_LIMIT = 200;
+	protected static final int DEFENSE_MINIMUM = 50;
 	protected static final String RANDOM_NAMES[] = {
 			"Jonnhy",
 			"Chuck Norris",
@@ -48,7 +48,7 @@ public abstract class Character {
 	 */
 	public Character () {
 		Random randomGenerator = new Random();
-		this.name = RANDOM_NAMES[randomGenerator.nextInt((RANDOM_NAMES.length) + 1)];
+		this.name = RANDOM_NAMES[randomGenerator.nextInt((RANDOM_NAMES.length - 1) + 1)];
 		this.maxHp = randomGenerator.nextInt((MAX_HP_LIMIT - MAX_HP_MINIMUM) + 1) + MAX_HP_MINIMUM;
 		this.hp = maxHp;
 		this.attack = randomGenerator.nextInt((ATTACK_LIMIT - ATTACK_MINIMUM) + 1) + ATTACK_MINIMUM;
@@ -64,10 +64,10 @@ public abstract class Character {
 	 * @param target
 	 */
 	public void attack(Character target) {
-		int damage = getAttack() * (100 / (100 + target.getDefense() + target.getExtraDefense()));
+		double damage = this.getAttack() * ((double)100 / (100.0 + (double)target.getDefense() + (double)target.getExtraDefense()));
 		
 		if (damage > 0) {
-			target.setHp(target.getHp() - damage);
+			target.setHp(target.getHp() - (int)damage);
 			
 		}
 	}
@@ -227,6 +227,7 @@ public abstract class Character {
 	 */
 	public void setUseItems(boolean useItems) {
 		this.useItems = useItems;
+		
 	}
 	// Esto no hará nada en monstruos
 	protected abstract void searchItems(Monster monster);

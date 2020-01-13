@@ -2,9 +2,20 @@ import java.util.Scanner;
 
 public class Monster extends Character {
 	
+	/**
+	 * Genera un monstruo pasandole todos sus parámetros
+	 * @param name
+	 * @param hp
+	 * @param attack
+	 * @param defense
+	 * @param extraDefense
+	 */
 	public Monster (String name, int hp, int attack, int defense, int extraDefense) {
 		super();
 	}
+	/**
+	 * Genera un monstruo sin parámetros, generados automáticamente
+	 */
 	public Monster () {
 		super();
 	}

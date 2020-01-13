@@ -41,6 +41,7 @@ public abstract class Character {
 		this.hp = hp;
 		this.attack = attack;
 		this.defense = defense;
+		this.extraDefense = (int)((double)defense * 0.5);
 		this.inventory = null;
 	}
 	/**

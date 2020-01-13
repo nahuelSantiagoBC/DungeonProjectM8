@@ -10,8 +10,8 @@ public class Monster extends Character {
 	 * @param defense
 	 * @param extraDefense
 	 */
-	public Monster (String name, int hp, int attack, int defense, int extraDefense) {
-		super();
+	public Monster (String name, int hp, int attack, int defense) {
+		super(name, hp, attack, defense);
 	}
 	/**
 	 * Genera un monstruo sin parámetros, generados automáticamente

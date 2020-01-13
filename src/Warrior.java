@@ -6,8 +6,8 @@ public class Warrior extends Hero {
 	 */
 	public Warrior() {
 		super();
-		this.attack *= 1.2;
-		this.defense *= 1.1;
+		this.attack = (int)((double)attack * 1.2);
+		this.defense = (int)((double)defense * 1.1);
 	}
 
 	/**

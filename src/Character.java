@@ -65,7 +65,14 @@ public abstract class Character {
 	 * @param target
 	 */
 	public void attack(Character target) {
-		double damage = this.getAttack() * ((double)100 / (100.0 + (double)target.getDefense() + (double)target.getExtraDefense()));
+		double damage;
+		if (target.isDefending()) {
+			damage = this.getAttack() * ((double)100 / (100.0 + (double)target.getDefense() + (double)target.getExtraDefense()));
+		}
+		else {
+			damage = this.getAttack() * ((double)100 / (100.0 + (double)target.getDefense()));
+		}
+		
 		
 		if (damage > 0) {
 			target.setHp(target.getHp() - (int)damage);
@@ -230,8 +237,6 @@ public abstract class Character {
 		this.useItems = useItems;
 		
 	}
-	// Esto no hará nada en monstruos
-	protected abstract void searchItems(Monster monster);
 	
 }
 

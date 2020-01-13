@@ -23,7 +23,8 @@ public class Monster extends Character {
 	/**
 	 * El Monstruo muere y da la opción al heroe de buscar objetos
 	 */
-	public void die (Character heroe) {
+	public void die (Character character) {
+		Hero hero = (Hero)character;
 		System.out.println("Has derrotado al monstruo!");
 		
 		System.out.println("Quieres ver si el monstruo lleva algún objeto consigo? (si/no)");
@@ -32,15 +33,8 @@ public class Monster extends Character {
 		
 		if (respuesta.equalsIgnoreCase("si")) {
 			
-			heroe.searchItems(this);
+			hero.searchItems(this);
 		}
-		
-	}
-	/**
-	 * El monstruo no puede buscar objetos, esto no hace nada, pero es necesario implementarlo
-	 */
-	public void searchItems(Monster monster) {
-		
 		
 	}
 }

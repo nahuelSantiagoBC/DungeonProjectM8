@@ -91,6 +91,13 @@ public class Mage extends Hero {
 	public void setSpellDescription(String spellDescription) {
 		this.spellDescription = spellDescription;
 	}
+	/**
+	 * Utilitza la bola de foc
+	 * @param target
+	 */
+	public void useSpell(Monster target) {
+		target.setHp(target.getHp() - 100);
+	}
 
 	
 	

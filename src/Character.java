@@ -6,9 +6,9 @@ public abstract class Character {
 
 	protected static final int MAX_HP_LIMIT = 500;
 	protected static final int MAX_HP_MINIMUM = 300;
-	protected static final int ATTACK_LIMIT = 150;
+	protected static final int ATTACK_LIMIT = 300;
 	protected static final int ATTACK_MINIMUM = 50;
-	protected static final int DEFENSE_LIMIT = 200;
+	protected static final int DEFENSE_LIMIT = 400;
 	protected static final int DEFENSE_MINIMUM = 50;
 	protected static final String RANDOM_NAMES[] = {
 			"Jonnhy",

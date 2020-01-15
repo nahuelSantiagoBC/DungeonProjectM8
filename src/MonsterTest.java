@@ -34,9 +34,17 @@ class MonsterTest {
 	}
 	
 	@Test
-	void monsterDies() {
+	//void monsterDies() {
+		//Warrior monsterSlayer = new Warrior();
+		//Monster randomMonster = new Monster();
+		//randomMonster.die(monsterSlayer);
+	//}
+	
+	void monsterDiesWithObject() {
 		Warrior monsterSlayer = new Warrior();
 		Monster randomMonster = new Monster();
+		Item randomitem = new Item();
+		randomMonster.setInventory(randomitem);
 		randomMonster.die(monsterSlayer);
 	}
 

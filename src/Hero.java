@@ -31,8 +31,8 @@ public abstract class Hero extends Character {
 		}
 		else {
 			System.out.println("El monstruo lleva un objeto con él.");
-			Item item = this.getInventory();
-			item.toString();
+			Item item = target.getInventory();
+			System.out.println(item.toString());
 			System.out.println("Quieres cambiarlo por tu objeto? (si/no)");
 			
 			respuesta = teclado.nextLine();

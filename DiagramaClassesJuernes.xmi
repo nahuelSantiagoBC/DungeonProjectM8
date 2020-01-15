@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_98f9wDfHEeqCMY1ScVqbPQ" name="project1">
+  <eAnnotations xmi:id="_98f9wTfHEeqCMY1ScVqbPQ" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_98f9wjfHEeqCMY1ScVqbPQ" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_98f9wzfHEeqCMY1ScVqbPQ" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Class" xmi:id="_98f9xDfHEeqCMY1ScVqbPQ" name="Character">
+    <ownedAttribute xmi:id="_98f9xTfHEeqCMY1ScVqbPQ" name="Name" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f9xjfHEeqCMY1ScVqbPQ" name="HP" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f9xzfHEeqCMY1ScVqbPQ" name="Defense" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f9yDfHEeqCMY1ScVqbPQ" name="Atack" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f9yTfHEeqCMY1ScVqbPQ" name="Inventory" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f9yjfHEeqCMY1ScVqbPQ" name="MaxHP" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f9yzfHEeqCMY1ScVqbPQ" name="ExtraDefense" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f9zDfHEeqCMY1ScVqbPQ" name="Defending" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f9zTfHEeqCMY1ScVqbPQ" name="UseItems" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f9zjfHEeqCMY1ScVqbPQ" name="Inventory" visibility="public" type="_98f94zfHEeqCMY1ScVqbPQ" isUnique="false"/>
+    <ownedOperation xmi:id="_98f9zzfHEeqCMY1ScVqbPQ" name="Attack" visibility="public"/>
+    <ownedOperation xmi:id="_98f90DfHEeqCMY1ScVqbPQ" name="Defend" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_98f90TfHEeqCMY1ScVqbPQ" name="Hero">
+    <generalization xmi:id="_98f90jfHEeqCMY1ScVqbPQ" general="_98f9xDfHEeqCMY1ScVqbPQ"/>
+    <ownedOperation xmi:id="_98f90zfHEeqCMY1ScVqbPQ" name="SearchItems" visibility="public"/>
+    <ownedOperation xmi:id="_98f91DfHEeqCMY1ScVqbPQ" name="SaveItem" visibility="public"/>
+    <ownedOperation xmi:id="_98f91TfHEeqCMY1ScVqbPQ" name="Die" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_98f91jfHEeqCMY1ScVqbPQ" name="Monster">
+    <generalization xmi:id="_98f91zfHEeqCMY1ScVqbPQ" general="_98f9xDfHEeqCMY1ScVqbPQ"/>
+    <ownedOperation xmi:id="_98f92DfHEeqCMY1ScVqbPQ" name="DropItem" visibility="public"/>
+    <ownedOperation xmi:id="_98f92TfHEeqCMY1ScVqbPQ" name="Die" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_98f92jfHEeqCMY1ScVqbPQ" name="Mage">
+    <generalization xmi:id="_98f92zfHEeqCMY1ScVqbPQ" general="_98f90TfHEeqCMY1ScVqbPQ"/>
+    <ownedAttribute xmi:id="_98f93DfHEeqCMY1ScVqbPQ" name="SpellName" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f93TfHEeqCMY1ScVqbPQ" name="MP" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f93jfHEeqCMY1ScVqbPQ" name="MaxMP" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f93zfHEeqCMY1ScVqbPQ" name="SpellDescription" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_98f94DfHEeqCMY1ScVqbPQ" name="UseSpell" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_98f94TfHEeqCMY1ScVqbPQ" name="Soldier">
+    <generalization xmi:id="_98f94jfHEeqCMY1ScVqbPQ" general="_98f90TfHEeqCMY1ScVqbPQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_98f94zfHEeqCMY1ScVqbPQ" name="Item">
+    <ownedAttribute xmi:id="_98f95DfHEeqCMY1ScVqbPQ" name="character" visibility="public" type="_98f9xDfHEeqCMY1ScVqbPQ" association="_98f97TfHEeqCMY1ScVqbPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_98f95TfHEeqCMY1ScVqbPQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f95jfHEeqCMY1ScVqbPQ" name="Name" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f95zfHEeqCMY1ScVqbPQ" name="HP" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f96DfHEeqCMY1ScVqbPQ" name="Atack" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f96TfHEeqCMY1ScVqbPQ" name="Armor" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f96jfHEeqCMY1ScVqbPQ" name="Mana" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f96zfHEeqCMY1ScVqbPQ" name="Type" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_98f97DfHEeqCMY1ScVqbPQ" name="Description" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_98f97TfHEeqCMY1ScVqbPQ" memberEnd="_98f95DfHEeqCMY1ScVqbPQ _98f97jfHEeqCMY1ScVqbPQ">
+    <ownedEnd xmi:id="_98f97jfHEeqCMY1ScVqbPQ" visibility="public" type="_98f94zfHEeqCMY1ScVqbPQ" association="_98f97TfHEeqCMY1ScVqbPQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_98f97zfHEeqCMY1ScVqbPQ"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
